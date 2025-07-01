@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Payment - DANA & GoPay</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://images.unsplash.com/photo-1621961454426-8007b01f5ddf?auto=format&fit=crop&w=1740&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .container {
+      background: rgba(0, 0, 0, 0.75);
+      max-width: 450px;
+      margin: 80px auto;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 40px rgba(255, 215, 0, 0.3);
+      text-align: center;
+      backdrop-filter: blur(10px);
+    }
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 20px;
+    }
+
+    .logo img {
+      height: 50px;
+      filter: brightness(1.1);
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 28px;
+      color: gold;
+    }
+
+    .qris-img {
+      width: 100%;
+      max-width: 280px;
+      border-radius: 12px;
+      margin: 20px auto;
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+    }
+
+    .info {
+      margin: 10px 0;
+      font-size: 18px;
+    }
+
+    button.copy-btn {
+      margin-top: 5px;
+      padding: 8px 18px;
+      font-size: 14px;
+      border: none;
+      border-radius: 8px;
+      background: gold;
+      color: black;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    button.copy-btn:hover {
+      background: #e6c200;
+      transform: scale(1.05);
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 13px;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Logo_dana_blue.svg" alt="DANA">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/GoPay_Logo.svg/512px-GoPay_Logo.svg.png" alt="GoPay">
+    </div>
+
+    <h1>Pembayaran Digital</h1>
+
+    <div class="info">
+      <strong>DANA:</strong> 082171792648 <br>
+      <button class="copy-btn" onclick="copyText('082171792648')">Salin Nomor DANA</button>
+    </div>
+
+    <div class="info">
+      <strong>GoPay:</strong> 083834033003 <br>
+      <button class="copy-btn" onclick="copyText('083834033003')">Salin Nomor GoPay</button>
+    </div>
+
+    <img class="qris-img" src="https://files.catbox.moe/sbo3uf.jpg" alt="QRIS">
+
+    <footer>© 2025 Pembayaran DANA & GoPay | Desain Mewah</footer>
+  </div>
+
+  <script>
+    function copyText(text) {
+      navigator.clipboard.writeText(text)
+        .then(() => alert('Nomor berhasil disalin!'))
+        .catch(() => alert('Gagal menyalin.'));
+    }
+  </script>
+</body>
+</html>
